@@ -1474,6 +1474,7 @@ async def _get_info(session: ClientSession) -> Tuple[Dict[str, Any], str]:
 async def _get_build_number(session: ClientSession) -> int:  # Thank you Discord-S.C.U.M
     """Fetches client build number"""
     default_build_number = 9999
+    return default_build_number
     try:
         login_page_request = await session.get('https://discord.com/login', timeout=7)
         login_page = await login_page_request.text()
